@@ -374,7 +374,7 @@ export async function buildOclifInstaller() {
 			klaw('node_modules/node-unzip-2/testData/')
 				.on('data', (item: { path: string, stats: Stats }) => {
 					if (!item.stats.isFile()) return;
-					if (path.basename(item.path) === 'archive.zip' && item.path.includes('node_modules/node-unzip-2/testData/')) {
+					if (path.basename(item.path) === 'archive.zip') {
 						fs.unlinkSync(item.path)
 					}
 				})

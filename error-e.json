@@ -1,0 +1,333 @@
+{
+  "logFormatVersion": 1,
+  "jobId": "783c514a-75d9-49c3-99bf-571a5e3043c9",
+  "status": "Invalid",
+  "statusSummary": "Archive contains critical validation errors",
+  "statusCode": 4000,
+  "archiveFilename": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip",
+  "uploadDate": "2021-03-01T13:58:48Z",
+  "sha256": "87a54841dcd782cf229c6dabc50e128d6266521d5518d35b31a664560f148c8d",
+  "ticketContents": null,
+  "issues": [
+    {
+      "severity": "warning",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/unzip-stream/testData/invalid/archive.zip",
+      "message": "b\"ditto: Couldn't read PKZip signature\\n\"",
+      "docUrl": null,
+      "architecture": null
+    },
+    {
+      "severity": "warning",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/unzip-stream/testData-php/split.zip",
+      "message": "b\"ditto: Couldn't read PKZip signature\\n\"",
+      "docUrl": null,
+      "architecture": null
+    },
+    {
+      "severity": "warning",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/unzip-stream/testData-php/class-trailing-slash.zip",
+      "message": "b\"ditto: Couldn't read PKZip signature\\n\"",
+      "docUrl": null,
+      "architecture": null
+    },
+    {
+      "severity": "warning",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/unzip-stream/testData-php/looks-like-zip64.zip",
+      "message": "b'error:  expected central file header signature not found (file #2).\\n  (please check that you have transferred or created the zipfile in the\\n  appropriate BINARY mode and that you have compiled UnZip properly)\\n'",
+      "docUrl": null,
+      "architecture": null
+    },
+    {
+      "severity": "warning",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/unzip-stream/testData-php/empty.zip",
+      "message": "b'ditto: Incorrect pkzip signature\\n'",
+      "docUrl": null,
+      "architecture": null
+    },
+    {
+      "severity": "warning",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/unzip-stream/testData-php/wrong-central-entry-sig.zip",
+      "message": "b'error [/tmp/tmpy9fl620n/balena-cli-v12.40.1-macOS-x64-installer.pkg.unpacked_00/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/unzip-stream/testData-php/wrong-central-entry-sig.zip]:  start of central directory not found;\\n  zipfile corrupt.\\n  (please check that you have transferred or created the zipfile in the\\n  appropriate BINARY mode and that you have compiled UnZip properly)\\n'",
+      "docUrl": null,
+      "architecture": null
+    },
+    {
+      "severity": "warning",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/unzip-stream/testData-php/nosig.zip",
+      "message": "b\"ditto: Couldn't read PKZip signature\\n\"",
+      "docUrl": null,
+      "architecture": null
+    },
+    {
+      "severity": "warning",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/unzip-stream/testData-golang/go-no-datadesc-sig.zip",
+      "message": "b\"ditto: foo.txt: No such file or directory\\nditto: Couldn't read pkzip signature.\\n\"",
+      "docUrl": null,
+      "architecture": null
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/lzma-native/binding-v4.0.6-node-v64-darwin-x64/lzma_native.node",
+      "message": "The binary is not signed.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/lzma-native/binding-v4.0.6-node-v64-darwin-x64/lzma_native.node",
+      "message": "The signature does not include a secure timestamp.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/ext2fs/build/Release/bindings.node",
+      "message": "The binary is not signed.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/ext2fs/build/Release/bindings.node",
+      "message": "The signature does not include a secure timestamp.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/ffi-napi/build/Release/ffi_bindings.node",
+      "message": "The binary is not signed.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/ffi-napi/build/Release/ffi_bindings.node",
+      "message": "The signature does not include a secure timestamp.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/ffi-napi/prebuilds/darwin-x64/node.napi.uv1.node",
+      "message": "The binary is not signed.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/ffi-napi/prebuilds/darwin-x64/node.napi.uv1.node",
+      "message": "The signature does not include a secure timestamp.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/drivelist/build/Release/drivelist.node",
+      "message": "The binary is not signed.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/drivelist/build/Release/drivelist.node",
+      "message": "The signature does not include a secure timestamp.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/resin-image-fs/node_modules/ext2fs/build/Release/bindings.node",
+      "message": "The binary is not signed.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/resin-image-fs/node_modules/ext2fs/build/Release/bindings.node",
+      "message": "The signature does not include a secure timestamp.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/ref-napi/prebuilds/darwin-x64/electron.napi.node",
+      "message": "The binary is not signed.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/ref-napi/prebuilds/darwin-x64/electron.napi.node",
+      "message": "The signature does not include a secure timestamp.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/ref-napi/prebuilds/darwin-x64/node.napi.node",
+      "message": "The binary is not signed.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/ref-napi/prebuilds/darwin-x64/node.napi.node",
+      "message": "The signature does not include a secure timestamp.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/@balena.io/usb/build/Release/usb_bindings.node",
+      "message": "The binary is not signed.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/@balena.io/usb/build/Release/usb_bindings.node",
+      "message": "The signature does not include a secure timestamp.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/@balena.io/usb/src/binding/usb_bindings.node",
+      "message": "The binary is not signed.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/@balena.io/usb/src/binding/usb_bindings.node",
+      "message": "The signature does not include a secure timestamp.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/xxhash/build/Release/hash.node",
+      "message": "The binary is not signed.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/xxhash/build/Release/hash.node",
+      "message": "The signature does not include a secure timestamp.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/mountutils/build/Release/MountUtils.node",
+      "message": "The binary is not signed.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/mountutils/build/Release/MountUtils.node",
+      "message": "The signature does not include a secure timestamp.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/denymount/bin/denymount",
+      "message": "The binary is not signed.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/denymount/bin/denymount",
+      "message": "The signature does not include a secure timestamp.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/denymount/bin/denymount",
+      "message": "The executable does not have the hardened runtime enabled.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/macmount/bin/macmount",
+      "message": "The binary is not signed.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/macmount/bin/macmount",
+      "message": "The signature does not include a secure timestamp.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/macmount/bin/macmount",
+      "message": "The executable does not have the hardened runtime enabled.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/fsevents/fsevents.node",
+      "message": "The binary is not signed.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    },
+    {
+      "severity": "error",
+      "code": null,
+      "path": "balena-cli-v12.40.1-macOS-x64-installer.pkg.zip/balena-cli-v12.40.1-macOS-x64-installer.pkg/balena-cli-v12.40.1-macOS-x64-installer.pkg Contents/Payload/usr/local/lib/balena-cli/node_modules/fsevents/fsevents.node",
+      "message": "The signature does not include a secure timestamp.",
+      "docUrl": null,
+      "architecture": "x86_64"
+    }
+  ]
+}
