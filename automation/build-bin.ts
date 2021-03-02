@@ -28,6 +28,7 @@ import * as path from 'path';
 import * as rimraf from 'rimraf';
 import * as semver from 'semver';
 import * as util from 'util';
+import glob from 'glob'
 
 import { stripIndent } from '../lib/utils/lazy';
 import {
@@ -368,6 +369,18 @@ export async function buildOclifInstaller() {
 	let packOpts = ['-r', ROOT];
 	if (process.platform === 'darwin') {
 		packOS = 'macos';
+		await new Promise((resolve, reject) => { // Delete extra zip files before continuing
+			glob('node_modules/node-unzip-2/testData/**/archive.zip', (err, files) => {
+				if (err) {
+					reject()
+					return
+				}
+				for (const file of files) {
+					fs.unlinkSync(file)
+				}
+				resolve(true)
+			})
+		})
 	} else if (process.platform === 'win32') {
 		packOS = 'win';
 		packOpts = packOpts.concat('-t', 'win32-x64');
