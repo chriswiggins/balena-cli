@@ -371,10 +371,10 @@ export async function buildOclifInstaller() {
 	if (process.platform === 'darwin') {
 		packOS = 'macos';
 		await new Promise((resolve, reject) => {
-			klaw('node_modules/node-unzip-2/testData/')
+			klaw('node_modules/')
 				.on('data', (item: { path: string, stats: Stats }) => {
 					if (!item.stats.isFile()) return;
-					if (path.basename(item.path) === 'archive.zip') {
+					if (path.basename(item.path).endsWith('.zip') && path.dirname(item.path).includes('test')) {
 						fs.unlinkSync(item.path)
 					}
 				})
@@ -409,7 +409,7 @@ export async function buildOclifInstaller() {
 		if (process.platform === 'win32') {
 			await signWindowsInstaller();
 		} else if (process.platform === 'darwin') {
-			throw new Error('This was supposed to error');
+			// TODO: Sign all .node files as well
 			await afterSignHook(); // File to notarize
 		}
 		console.log(`oclif installer build completed`);
