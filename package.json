@@ -167,7 +167,6 @@
     "ent": "^2.2.0",
     "filehound": "^1.17.4",
     "fs-extra": "^8.0.1",
-    "glob": "^7.1.6",
     "gulp": "^4.0.1",
     "gulp-inline-source": "^2.1.0",
     "http-proxy": "^1.18.1",
