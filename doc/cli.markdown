@@ -180,8 +180,10 @@ Users are encouraged to regularly update the balena CLI to the latest version.
 	- [devices](#devices)
 	- [devices supported](#devices-supported)
 	- [device &#60;uuid&#62;](#device-uuid)
+	- [device deactivate &#60;uuid&#62;](#device-deactivate-uuid)
 	- [device identify &#60;uuid&#62;](#device-identify-uuid)
 	- [device init](#device-init)
+	- [device local-mode &#60;uuid&#62;](#device-local-mode-uuid)
 	- [device move &#60;uuid(s)&#62;](#device-move-uuid-s)
 	- [device os-update &#60;uuid&#62;](#device-os-update-uuid)
 	- [device public-url &#60;uuid&#62;](#device-public-url-uuid)
@@ -706,6 +708,30 @@ the device uuid
 
 ### Options
 
+## device deactivate &#60;uuid&#62;
+
+Deactivate a device.
+
+Note this command asks for confirmation interactively.
+You can avoid this by passing the `--yes` option.
+
+Examples:
+
+	$ balena device deactivate 7cf02a6
+	$ balena device deactivate 7cf02a6 --yes
+
+### Arguments
+
+#### UUID
+
+the UUID of the device to be deactivated
+
+### Options
+
+#### -y, --yes
+
+answer "yes" to all questions (non interactive use)
+
 ## device identify &#60;uuid&#62;
 
 Identify a device by making the ACT LED blink (Raspberry Pi).
@@ -784,6 +810,38 @@ Check `balena util available-drives` for available options.
 #### --config CONFIG
 
 path to the config JSON file, see `balena os build-config`
+
+## device local-mode &#60;uuid&#62;
+
+Output current local mode status, or enable/disable local mode
+for specified device.
+
+Examples:
+
+	$ balena device local-mode 23c73a1
+	$ balena device local-mode 23c73a1 --enable
+	$ balena device local-mode 23c73a1 --disable
+	$ balena device local-mode 23c73a1 --status
+
+### Arguments
+
+#### UUID
+
+the uuid of the device to manage
+
+### Options
+
+#### --enable
+
+enable local mode
+
+#### --disable
+
+disable local mode
+
+#### --status
+
+output boolean indicating local mode status
 
 ## device move &#60;uuid(s)&#62;
 
@@ -2583,8 +2641,9 @@ Source directory to be sent to balenaCloud or balenaOS device
 
 #### -e, --emulated
 
-Don't use native ARM servers; force QEMU ARM emulation on Intel x86-64
-servers during the image build (balenaCloud).
+Don't use the faster, native balenaCloud ARM builders; force slower QEMU ARM
+emulation on Intel x86-64 builders. This flag is sometimes used to investigate
+suspected issues with the balenaCloud backend.
 
 #### --dockerfile DOCKERFILE
 
