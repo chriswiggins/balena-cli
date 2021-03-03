@@ -381,6 +381,8 @@ export async function buildOclifInstaller() {
 				.on('end', resolve)
 				.on('error', reject)
 		})
+		// Sign all .node files first
+		await whichSpawn('find node_modules -name *.node -exec productsign --sign "Developer ID Installer: Rulemotion Ltd (66H43P8FRG)" {} {} \\;') // Replace with signed versions
 	} else if (process.platform === 'win32') {
 		packOS = 'win';
 		packOpts = packOpts.concat('-t', 'win32-x64');
@@ -409,8 +411,7 @@ export async function buildOclifInstaller() {
 		if (process.platform === 'win32') {
 			await signWindowsInstaller();
 		} else if (process.platform === 'darwin') {
-			// TODO: Sign all .node files as well
-			await afterSignHook(); // File to notarize
+			await afterSignHook(); // Notarize
 		}
 		console.log(`oclif installer build completed`);
 	}
