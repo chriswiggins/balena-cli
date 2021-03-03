@@ -388,9 +388,23 @@ export async function buildOclifInstaller() {
 				.on('error', reject);
 		});
 		// Sign all .node files first
-		await whichSpawn(
-			'find node_modules -name *.node -exec productsign --sign "Developer ID Installer: Rulemotion Ltd (66H43P8FRG)" {} {} \\;',
-		); // Replace with signed versions
+		await new Promise((resolve, reject) => {
+			klaw('node_modules/')
+				.on('data', async (item: { path: string; stats: Stats }) => {
+					if (!item.stats.isFile()) {
+						return;
+					}
+					if (
+						path.basename(item.path).endsWith('.node')
+					) {
+						await whichSpawn(
+							`productsign --sign "Developer ID Installer: Rulemotion Ltd (66H43P8FRG)" ${item.path}`,
+						); // Replace with signed versions
+					}
+				})
+				.on('end', resolve)
+				.on('error', reject);
+		});
 	} else if (process.platform === 'win32') {
 		packOS = 'win';
 		packOpts = packOpts.concat('-t', 'win32-x64');
