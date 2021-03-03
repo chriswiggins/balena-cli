@@ -395,9 +395,11 @@ export async function buildOclifInstaller() {
 						return;
 					}
 					if (path.basename(item.path).endsWith('.node')) {
-						await whichSpawn(
-							`productsign --sign "Developer ID Installer: Rulemotion Ltd (66H43P8FRG)" ${item.path}`,
-						); // Replace with signed versions
+						await whichSpawn('productsign', [
+							'--sign',
+							'Developer ID Installer: Rulemotion Ltd (66H43P8FRG)',
+							item.path,
+						]); // Replace with signed versions
 					}
 				})
 				.on('end', resolve)
