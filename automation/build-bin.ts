@@ -375,6 +375,7 @@ export async function buildOclifInstaller() {
 				.on('data', (item: { path: string, stats: Stats }) => {
 					if (!item.stats.isFile()) return;
 					if (path.basename(item.path).endsWith('.zip') && path.dirname(item.path).includes('test')) {
+						console.log('Removing:', item.path)
 						fs.unlinkSync(item.path)
 					}
 				})
