@@ -394,9 +394,7 @@ export async function buildOclifInstaller() {
 					if (!item.stats.isFile()) {
 						return;
 					}
-					if (
-						path.basename(item.path).endsWith('.node')
-					) {
+					if (path.basename(item.path).endsWith('.node')) {
 						await whichSpawn(
 							`productsign --sign "Developer ID Installer: Rulemotion Ltd (66H43P8FRG)" ${item.path}`,
 						); // Replace with signed versions
