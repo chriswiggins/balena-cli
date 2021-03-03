@@ -28,8 +28,8 @@ import * as path from 'path';
 import * as rimraf from 'rimraf';
 import * as semver from 'semver';
 import * as util from 'util';
-import * as klaw from 'klaw'
-import { Stats } from 'fs'
+import * as klaw from 'klaw';
+import { Stats } from 'fs';
 
 import { stripIndent } from '../lib/utils/lazy';
 import {
@@ -372,18 +372,25 @@ export async function buildOclifInstaller() {
 		packOS = 'macos';
 		await new Promise((resolve, reject) => {
 			klaw('node_modules/')
-				.on('data', (item: { path: string, stats: Stats }) => {
-					if (!item.stats.isFile()) return;
-					if (path.basename(item.path).endsWith('.zip') && path.dirname(item.path).includes('test')) {
-						console.log('Removing zip', item.path)
-						fs.unlinkSync(item.path)
+				.on('data', (item: { path: string; stats: Stats }) => {
+					if (!item.stats.isFile()) {
+						return;
+					}
+					if (
+						path.basename(item.path).endsWith('.zip') &&
+						path.dirname(item.path).includes('test')
+					) {
+						console.log('Removing zip', item.path);
+						fs.unlinkSync(item.path);
 					}
 				})
 				.on('end', resolve)
-				.on('error', reject)
-		})
+				.on('error', reject);
+		});
 		// Sign all .node files first
-		await whichSpawn('find node_modules -name *.node -exec productsign --sign "Developer ID Installer: Rulemotion Ltd (66H43P8FRG)" {} {} \\;') // Replace with signed versions
+		await whichSpawn(
+			'find node_modules -name *.node -exec productsign --sign "Developer ID Installer: Rulemotion Ltd (66H43P8FRG)" {} {} \\;',
+		); // Replace with signed versions
 	} else if (process.platform === 'win32') {
 		packOS = 'win';
 		packOpts = packOpts.concat('-t', 'win32-x64');
