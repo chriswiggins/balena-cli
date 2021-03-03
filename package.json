@@ -274,11 +274,10 @@
     "umount": "^1.1.6",
     "update-notifier": "^4.1.0",
     "which": "^2.0.2",
-    "windosu": "^0.3.0",
     "window-size": "^1.1.0"
   },
   "optionalDependencies": {
-    "windosu": "^0.3.0",
-    "net-keepalive": "^1.3.6"
+    "net-keepalive": "^1.3.6",
+    "windosu": "^0.3.0"
   }
 }
