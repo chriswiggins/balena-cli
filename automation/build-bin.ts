@@ -370,6 +370,7 @@ export async function buildOclifInstaller() {
 	let packOpts = ['-r', ROOT];
 	if (process.platform === 'darwin') {
 		packOS = 'macos';
+		console.log('Deleting unneeded zip files...');
 		await new Promise((resolve, reject) => {
 			klaw('node_modules/')
 				.on('data', (item: { path: string; stats: Stats }) => {
@@ -388,6 +389,7 @@ export async function buildOclifInstaller() {
 				.on('error', reject);
 		});
 		// Sign all .node files first
+		console.log('Signing .node files...');
 		await new Promise((resolve, reject) => {
 			klaw('node_modules/')
 				.on('data', async (item: { path: string; stats: Stats }) => {
@@ -395,6 +397,13 @@ export async function buildOclifInstaller() {
 						return;
 					}
 					if (path.basename(item.path).endsWith('.node')) {
+						console.log('running command:', 'codesign', [
+							'-d',
+							'-f',
+							'-s',
+							'Developer ID Application: Balena Ltd (66H43P8FRG)',
+							item.path,
+						]);
 						await whichSpawn('codesign', [
 							'-d',
 							'-f',
