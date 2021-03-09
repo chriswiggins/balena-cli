@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'Linux installation instructions: Add sudo configuration section'
+      hash: 2520fcc7390583f303302b795298b052f636654c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Paulo Castro
+      nested: []
+  version: 12.40.5
+  date: 2021-03-09T18:00:38.387Z
+- commits:
     - subject: 'macOS GUI installer: Update signing certificate name'
       hash: c62445a39995fb41a54636ab559462e2a7c4324b
       body: ''
