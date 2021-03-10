@@ -436,14 +436,14 @@ export async function buildOclifInstaller() {
 			'-f',
 			'-s',
 			'Developer ID Application: Balena Ltd (66H43P8FRG)',
-			'node_modules/denymount/bin/macmount',
+			'node_modules/macmount/bin/macmount',
 		]);
 		await whichSpawn('codesign', [
 			'-d',
 			'-f',
 			'-s',
 			'Developer ID Application: Balena Ltd (66H43P8FRG)',
-			'node_modules/denymount/bin/macmount',
+			'node_modules/macmount/bin/macmount',
 		]);
 	} else if (process.platform === 'win32') {
 		packOS = 'win';
