@@ -416,7 +416,7 @@ export async function buildOclifInstaller() {
 				.on('end', resolve)
 				.on('error', reject);
 		});
-		console.log('Signing other binaries...')
+		console.log('Signing other binaries...');
 		console.log('running command:', 'codesign', [
 			'-d',
 			'-f',
@@ -473,9 +473,9 @@ export async function buildOclifInstaller() {
 		if (process.platform === 'win32') {
 			await signWindowsInstaller();
 		} else if (process.platform === 'darwin') {
-			console.log('Notarizing package...')
+			console.log('Notarizing package...');
 			await afterSignHook(); // Notarize
-			console.log('Package notarized.')
+			console.log('Package notarized.');
 		}
 		console.log(`oclif installer build completed`);
 	}
