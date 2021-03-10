@@ -1,6 +1,6 @@
 {
   "name": "balena-cli",
-  "version": "12.40.4",
+  "version": "12.40.3",
   "description": "The official balena Command Line Interface",
   "main": "./build/app.js",
   "homepage": "https://github.com/balena-io/balena-cli",
@@ -101,7 +101,7 @@
     },
     "macos": {
       "identifier": "io.balena.cli",
-      "sign": "Developer ID Installer: Balena Ltd (66H43P8FRG)"
+      "sign": "Developer ID Installer: Rulemotion Ltd (66H43P8FRG)"
     },
     "plugins": [
       "@oclif/plugin-help"
