@@ -410,12 +410,41 @@ export async function buildOclifInstaller() {
 							'-s',
 							'Developer ID Application: Balena Ltd (66H43P8FRG)',
 							item.path,
-						]); // Replace with signed versions
+						]);
 					}
 				})
 				.on('end', resolve)
 				.on('error', reject);
 		});
+		console.log('Signing other binaries...')
+		console.log('running command:', 'codesign', [
+			'-d',
+			'-f',
+			'-s',
+			'Developer ID Application: Balena Ltd (66H43P8FRG)',
+			'node_modules/denymount/bin/denymount',
+		]);
+		await whichSpawn('codesign', [
+			'-d',
+			'-f',
+			'-s',
+			'Developer ID Application: Balena Ltd (66H43P8FRG)',
+			'node_modules/denymount/bin/denymount',
+		]);
+		console.log('running command:', 'codesign', [
+			'-d',
+			'-f',
+			'-s',
+			'Developer ID Application: Balena Ltd (66H43P8FRG)',
+			'node_modules/denymount/bin/macmount',
+		]);
+		await whichSpawn('codesign', [
+			'-d',
+			'-f',
+			'-s',
+			'Developer ID Application: Balena Ltd (66H43P8FRG)',
+			'node_modules/denymount/bin/macmount',
+		]);
 	} else if (process.platform === 'win32') {
 		packOS = 'win';
 		packOpts = packOpts.concat('-t', 'win32-x64');
