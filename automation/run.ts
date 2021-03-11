@@ -27,7 +27,8 @@ import {
 	release,
 	updateDescriptionOfReleasesAffectedByIssue1359,
 } from './deploy-bin';
-import { fixPathForMsys, ROOT, runUnderMsys } from './utils';
+// import { fixPathForMsys, ROOT, runUnderMsys } from './utils';
+import { ROOT } from './utils';
 
 // DEBUG set to falsy for negative values else is truthy
 process.env.DEBUG = ['0', 'no', 'false', '', undefined].includes(
@@ -95,23 +96,23 @@ export async function run(args?: string[]) {
 
 	for (const arg of args) {
 		try {
-			if (arg === 'build:installer' && process.platform === 'win32') {
-				// ensure running under MSYS2
-				if (!process.env.MSYSTEM) {
-					process.env.MSYS2_PATH_TYPE = 'inherit';
-					await runUnderMsys([
-						fixPathForMsys(process.argv[0]),
-						fixPathForMsys(process.argv[1]),
-						arg,
-					]);
-					continue;
-				}
-				if (process.env.MSYS2_PATH_TYPE !== 'inherit') {
-					throw new Error(
-						'the MSYS2_PATH_TYPE env var must be set to "inherit"',
-					);
-				}
-			}
+			// if (arg === 'build:installer' && process.platform === 'win32') {
+			// 	// ensure running under MSYS2
+			// 	if (!process.env.MSYSTEM) {
+			// 		process.env.MSYS2_PATH_TYPE = 'inherit';
+			// 		await runUnderMsys([
+			// 			fixPathForMsys(process.argv[0]),
+			// 			fixPathForMsys(process.argv[1]),
+			// 			arg,
+			// 		]);
+			// 		continue;
+			// 	}
+			// 	if (process.env.MSYS2_PATH_TYPE !== 'inherit') {
+			// 		throw new Error(
+			// 			'the MSYS2_PATH_TYPE env var must be set to "inherit"',
+			// 		);
+			// 	}
+			// }
 			const cmdFunc = commands[arg];
 			await cmdFunc();
 		} catch (err) {
