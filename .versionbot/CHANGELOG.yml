@@ -1,4 +1,19 @@
 - commits:
+    - subject: >-
+        Add macOS uninstall script (sudo
+        /usr/local/lib/balena-cli/bin/uninstall)
+      hash: 627caef35ca80c1cb9a8d70c9c19e7c36ff898fa
+      body: |
+        Update @oclif/dev-cli from v1.22.2 to v1.26.0 and amend patch files to
+        speed up build and facilitate macOS installer notarization.
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Paulo Castro
+      nested: []
+  version: 12.41.0
+  date: 2021-03-12T00:51:57.713Z
+- commits:
     - subject: 'macOS GUI installer: Update signing certificate name'
       hash: c62445a39995fb41a54636ab559462e2a7c4324b
       body: ''
