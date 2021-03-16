@@ -1,4 +1,27 @@
 - commits:
+    - subject: Improve push and logs support for Node.js v14 (bump 'net-keepalive')
+      hash: ec659898192309f27b1736b24a77761255221008
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Paulo Castro
+      nested: []
+    - subject: 'osConfigure/localFlash: Add support for Node.js v14'
+      hash: 4b73694cecbab59586d96c94909de593dae46eb6
+      body: "* Replace old resin-image-fs with newer balena-image-fs\n* package.json: Remove resin-image-fs package\n* package: Install dependencies that work with node14\n* Remove resin-image-fs typings\n* Fix etcher-sdk related types\n* local/flash: Add unmountOnSuccess, write, direct properties on flash\n\tTaken from https://github.com/balena-io-modules/etcher-sdk/blob/master/examples/multi-destination.ts\n* tests/utils/eol-conversion: Remove ext2fs sample binary\n\tSpecifically ext2fs/build/Release/bindings.node\n\tI removed it because the file doesn't exist\n* tests/test-data/pkg: Add new expected warnings darwin/linux/windows\n"
+      footer:
+        Resolves: '#1990'
+        resolves: '#1990'
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Marios Balamatsias <mbalamatsias@gmail.com>
+        signed-off-by: Marios Balamatsias <mbalamatsias@gmail.com>
+      author: Marios Balamatsias
+      nested: []
+  version: 12.42.0
+  date: 2021-03-16T18:22:09.366Z
+- commits:
     - subject: 'docker: Fix path to init when workdir is changed'
       hash: 3cff091e3a4e24a2fea8d576691dcd7d7f0b6489
       body: ''
